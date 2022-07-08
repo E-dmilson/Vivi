@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: -webkit-linear-gradient(darkviolet, red);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2% 0%;
+}
+/*animation*/
+#msg{
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transform: translateY(-280px);
+}
+
+@keyframes slide{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#msg .titulo{
+    text-align: center;
+}
+
+#msg .wishes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    color: #FFF;
+}
+p{
+    text-align: justify;
+}
+span{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+#rodape{
+    display: flex;
+    flex-direction: column;
+    background: darkmagenta;
+}
+#rodape .last{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    height: 22vh;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    color: darkorange;
+}
+#rodape .last h3{
+    padding-top: 8%;
+}
+#rodape{
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transform: translateX(-280px);
+}
+
+@keyframes slide{
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 324px){
+    #msg .titulo{
+        font-size: 12px;
+    }
+    body{
+        height: auto;
+    }
+    #rodape .last h3{
+        text-align: center;
+        font-size: 12px;
+        text-align: justify;
+        padding: 0% 1%;
+        padding-top: 15%;
+    }
+}
